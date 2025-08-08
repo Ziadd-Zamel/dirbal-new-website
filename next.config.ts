@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: ["dashboard.dirbal.ly"],
+  },
 };
 
 export default nextConfig;
