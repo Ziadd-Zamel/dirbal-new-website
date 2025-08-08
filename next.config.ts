@@ -7,6 +7,16 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  experimental: {
+    fontLoaders: [
+      { loader: "@next/font/google", options: { subsets: ["latin"] } },
+    ],
+    // Disable font optimization for Vercel builds
+    ...(process.env.VERCEL && {
+      fontLoaders: [],
+    }),
+    optimizePackageImports: [],
+  },
 };
 
 export default nextConfig;
