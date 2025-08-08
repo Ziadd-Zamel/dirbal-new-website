@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Tajawal } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/providers";
+import localFont from "next/font/local";
 
-const tajawal = Tajawal({
-  subsets: ["arabic", "latin"],
+const tajawal = localFont({
+  src: "./fonts/Tajawal-Regular.ttf",
   variable: "--font-tajawal",
-  weight: ["200", "300", "400", "500", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
